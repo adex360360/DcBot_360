@@ -15,8 +15,8 @@
   ],
   "author": "Proladon",
   "scripts": {
-    "dev": "cross-env MODE=development vite-node --watch src/main.ts ",
-    "start": "cross-env MODE=production vite-node src/main.ts ",
+    "dev": "cross-env MODE=development vite-node --watch --experimental-loader hot-esm src/main.ts ",
+    "start": "cross-env MODE=production vite-node --experimental-loader hot-esm src/main.ts ",
     "docker:build": "cross-env MODE=production sudo ./script/build_docker.sh",
     "docker:run": "sudo ./script/run_docker.sh"
   },
